@@ -1,0 +1,159 @@
+/* start varible */
+:root{
+    /* ### Primary */
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+/* ### Accent */
+--Blue: hsl(248, 32%, 49%);
+/* ### Neutral */
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+/* end variable  */
+ /* Start Global Rules */
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+   }
+  body {
+   margin: 0;
+   padding: 0;
+box-sizing: border-box;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  /* start font / */
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(font/Poppins-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url(font/Poppins-Regular.ttf);
+  }
+
+  /* end font  */
+  .coding{
+    background-image: url(images/bg-intro-desktop.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+    background-color: var(--Red);
+    padding: 20px 0;
+    
+  }
+  .coding .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  .coding .container .description{
+
+    width: 400px;
+    max-width: 100%;
+  }
+  @media (max-width:919px) {
+    .coding .container .description{
+        text-align: center;
+    }
+  }
+  .coding .container .description .title{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Poppins-Bold";
+  }
+  .coding .container .description .descripption{
+    color: white;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: "Poppins-Regular";
+  }
+  .coding .container .purshase{
+    text-align: center;
+  }
+  .coding .container .purshase .try{
+    background-color: var(--Blue);
+    padding: 2px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+   
+
+  }
+  .coding .container .purshase .try .text{
+    color: white; 
+    font-weight: 400;
+    
+  }
+  .coding .container .purshase .fileds{
+    background-color: white;
+    padding: 20px;
+
+  }
+  .coding .container .purshase  .fileds form{
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coding .container .purshase  .fileds form input{
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+
+  }
+  .coding .container .purshase  .fileds form  button{
+    padding: 10px;
+    outline: none;
+    background-color: var( --Green);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  .coding .container .purshase  .fileds .condition{
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+  }
+  .coding .container .purshase  .fileds .condition span{
+    color: var(--Red);
+  }
+  .error{
+    color: var(--Red);
+    text-align: right;
+  }
