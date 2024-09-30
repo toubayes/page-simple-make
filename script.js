@@ -1,27 +1,38 @@
-const submit=document.querySelector(".fileds button");
-let inputs=document.querySelectorAll(".fileds input");
-let errors=document.querySelectorAll(".error");
 
-submit.addEventListener("click",(event)=>{
-    console.log("Submit button clicked");
+const sections=document.querySelector(".sections");
+const down=document.querySelector(".open");
+const drp=document.querySelectorAll(".features-drop, .company-drop");  /*feature + company */
+const dropdown=document.querySelectorAll(".features-dropdown , .company-dropdown"); /*feature + company  contaent*/
 
-    let isFormValid = true; // Track form validation status
-    
-    inputs.forEach((input, index) => {
-        if (input.value.trim() === "") {
-            errors[index].innerHTML = `${input.type} input cannot be empty`;
-            input.style.borderColor = "red"; // Set the border color to red
-            isFormValid=false;
-        } else {
-            errors[index].innerHTML = ""; // Clear the error message if input is not empty
-            input.style.borderColor = ""; // Reset the border color
+let isOpen =false;
+// looop for #la 3add les dr =2
+for(let i=0;i<drp.length;i++){   /* iterAtion 1 i==0 */
+    drp[i].addEventListener("click",()=>{
+        const arrowImage = drp[i].querySelector("img"); /* img ta3 drp[0] */
+              /* tooggle img 8**/
+        if (arrowImage.src.includes("icon-arrow-down.svg")) {
+            arrowImage.src = "images/icon-arrow-up.svg";
+
+            dropdown[i].style.display="block";
+        } 
+        else {
+            arrowImage.src = "images/icon-arrow-down.svg";
+            dropdown[i].style.display="none";
         }
+           /* end tooggle img 8**/
     });
+}/* end iterAtion 1 i==0 */
 
-    // If the form is not valid, prevent submission
-    if (!isFormValid) {
-        event.preventDefault();
-        console.log("Form submission prevented due to validation errors.");
+
+down.addEventListener("click",()=>{
+    console.log("down button clicked");
+    
+    if (!isOpen) {
+        sections.classList.add("active");
+        down.src = 'images/icon-close-menu.svg'; // Switch to close icon
+    } else {
+        sections.classList.remove("active");
+        down.src = 'images/icon-menu.svg'; // Switch back to menu icon
     }
-});
-
+    isOpen = !isOpen;
+})

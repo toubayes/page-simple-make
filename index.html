@@ -6,10 +6,11 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Intro component with sign up form</title>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- css file  -->
+  <!-- css fille  -->
    <link rel="stylesheet" href="style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -17,45 +18,104 @@
   </style>
 </head>
 <body>
-<main class="coding">
+<!-- start header  -->
+ <header>
   <div class="container">
-    <div class="description">
-      <h1 class="title">Learn to code by watching others</h1>
-   <p class="descripption">  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-</p>
-
+    <div class="image">
+      <img src="images/logo.svg" alt="logo">
     </div>
-    <div class="purshase">
-      <div class="try">
-        <p class="text"><b>Try it free 7 days </b>then $20/mo. thereafter</p>
+    <div class="sections">
+      <div class="links">
+        <ul>
+          <li>
+            <div class="features-drop">
+           <p>Features</p>
+           <img src="images/icon-arrow-down.svg" alt="down">
+          </div>
+          <div class="features-dropdown">
+            <ul >
+              <li>
+                <img src="images\icon-todo.svg" alt="Todo">
+                <p>Todo List</p>
+              </li>
+              <li>
+                <img src="images/icon-calendar.svg" alt="Calendar">
+                <p>Calendar</p>
+              </li>
+              <li>
+                <img src="images/icon-reminders.svg" alt="Reminder">
+                <p>Reminders</p>
+              </li>
+              <li>
+                <img src="images/icon-planning.svg" alt="Planning">
+                <p>Planning</p>
+              </li>
+            </ul>
+          </div>
+          </li>
+          <li>
+            <div class="company-drop">
+            <p>Company</p>
+            <img src="images/icon-arrow-down.svg" alt="down">
+          </div>
+          <div class="company-dropdown">
+            <ul >
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          </li>
+          <li>
+            <p>Carrers</p>
+          </li>
+          <li>
+            <p>About</p>
+          </li>
+        </ul>
       </div>
-            <div class="fileds">
-              <form action="">
-
-               <input type="text" autocomplete="off" name="first" placeholder="First Name" >
-               <span class="error"></span>
-                 <input type="text" name="last" placeholder="Last Name"  >
-                 <span class="error"></span>
-                <input type="email" name="email" placeholder="Email Address" >
-                <span class="error"></span>
-                <input type="password" name="Password"placeholder="Passwords" >
-                <span class="error"></span>
-                <button class="submit">Claim your free trial</button>
-              </form>
-              <p class="condition">  By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
-            
-      </div>
+      <div class="buttons">
+        <button class="login"><a href="">Login</a></button>
+        <button class="regester"><a href="">Regester</a></button>
+      
+      </div>  
     </div>
+    <img src="images/icon-menu.svg" class="open" alt="meneu">
   </div>
-</main>
+ </header>
+ <!-- end header  -->
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Youcef laala</a>
-    </p>
-  </footer>
+ <!-- start landing  -->
+  <main class="landing">
+    <div class="container">
+      <div class="description">
+        <h1 class="title">
+            Make <br> remote work
+        </h1>
+        <p class="text">
+            Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+        </p>
+        <button>Learn more</button>
+        <div class="img-client">
+          <img src="images/client-audiophile.svg" alt="audiophile">
+          <img src="images/client-databiz.svg" alt="beyond">
+          <img src="images/client-maker.svg" alt="cc">
+          <img src="images/client-meet.svg" alt="angel">
+        </div>
+      </div>
+      <div class="img-landing">
+        <img src="images/image-hero-desktop.png" alt="landing">
+      </div>
+
+    </div>
+  </main>
+  <!-- end landing  -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Youcef laala</a>.
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
